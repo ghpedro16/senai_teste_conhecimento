@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria Gourmet IANES</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="listarProdutos()">
+
+    <header>
+
+        <h1>Doceria Gourmet IANES</h1>
+
+        <button class="btn-logout" onclick="logout()">
+            Sair
+        </button>
+
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <h2>Novo Produto</h2>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Nome do produto">
+
+            <input
+                type="number"
+                id="preco"
+                step="0.01"
+                placeholder="Preço">
+
+            <input
+                type="number"
+                id="peso"
+                step="0.01"
+                placeholder="Peso">
+
+            <input
+                type="number"
+                id="quantidade"
+                placeholder="Quantidade inicial">
+
+            <input
+                type="date"
+                id="data_vencimento">
+
+            <button onclick="cadastrarProduto()">
+                Cadastrar Produto
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Produtos Cadastrados</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Peso</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="lista-produtos">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="./produtos.js"></script>
+
+</body>
+
+</html>
